@@ -16,4 +16,4 @@ if ($stmt->execute()) {
     echo "Error: " . $stmt->error;
 }
 $stmt->close();//close the prepared staememt.
-?>
+?> 
