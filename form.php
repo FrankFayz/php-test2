@@ -105,6 +105,45 @@
         background: linear-gradient(90deg, #f357a8 0%, #7b2ff2 100%);
         transform: translateY(-2px) scale(1.03);
     }
+    .links {
+    max-width: 650px;
+    margin: 30px auto 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(31,38,135,0.10);
+    padding: 18px 30px;
+    text-align: center;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links li {
+    margin: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #7b2ff2;
+    transition: color 0.2s;
+}
+
+.links a {
+    text-decoration: none;
+    color: #f357a8;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #e0ff70 0%, #aaffc3 100%);
+    box-shadow: 0 1px 4px rgba(123,47,242,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+
+.links a:hover {
+    background: linear-gradient(90deg, #f357a8 0%, #7b2ff2 100%);
+    color: #fff;
+}
 </style>
 <body>
     <form action="form.php" method="post" class="form">
@@ -145,6 +184,12 @@
             <button class = "submit" name="submit">SUBMIT</button>
 </div >
 </form>
+    <div class="links">
+       <ul>
+        <li><a href="update.php"></a>UPDATE EMPLOYEE DETAILS</li>
+        <li><a href="delete.php"></a>DELETE EMPLOYEE DETAILS</li>
+       </ul>
+    </div>
 <?php
 include("connection.php");
 if(isset($_POST["submit"])){
